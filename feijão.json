@@ -1,0 +1,38 @@
+{
+  "cultura": "Feijão",
+  "importancia_agricultura_familiar": {
+    "representatividade_nacional": "70% do consumo nacional é proveniente da agricultura familiar",
+    "papel_social": "Base da segurança alimentar e geração de renda para pequenos produtores"
+  },
+  "analise_mercado_parana_2007_2008": {
+    "historico_precos": {
+      "primeiro_semestre_2007": "Abaixo de R$ 40,00 por saca (feijão preto)",
+      "dezembro_2007": "Atingiu R$ 82,00 por saca",
+      "intervencao": "Necessidade de atuação da CONAB para conter a queda das cotações"
+    },
+    "comportamento_da_safra": {
+      "area_plantada": "Houve redução de área na 2ª safra devido ao período de preços baixos enfrentado anteriormente",
+      "condicoes_climaticas": "Preocupação com chuvas constantes que afetam a produtividade e qualidade"
+    }
+  },
+  "vulnerabilidades_e_riscos": {
+    "climaticos": [
+      "Sensibilidade extrema a geadas",
+      "Vulnerabilidade ao excesso de chuvas no período de colheita"
+    ],
+    "economicos": [
+      "Oscilação brusca de preços",
+      "Pressão da agricultura convencional (commodities) sobre áreas de agricultura familiar"
+    ]
+  },
+  "contexto_regional": {
+    "estado": "Paraná",
+    "municipio_foco": "Toledo",
+    "dinamica": "Integração em programas sociais como a Cozinha Social e Restaurantes Populares"
+  },
+  "fontes_de_dados": [
+    "SEAB/DERAL - Relatório de Situação das Principais Culturas (2008)",
+    "Censo Agropecuário IBGE (2006/2017) via análise UNILA (2025)",
+    "UTFPR - Estudo sobre Controle de Geadas em Plantações (2017)"
+  ]
+}
