@@ -1,0 +1,33 @@
+{
+  "cultura": "Soja",
+  "contexto_geral": "A soja é identificada como um dos principais pilares do agronegócio e da economia agrícola, com forte presença em sistemas de produção integrados e voltados para a exportação.",
+  "analise_mercado_e_producao_2008": {
+    "condicoes_climaticas": "Favoráveis no período (meados de outubro de 2007 em diante), resultando em lavouras com bom estande e desenvolvimento no Paraná.",
+    "comercializacao": {
+      "ritmo": "Vendas consideradas lentas no início de 2008.",
+      "estoque": "Produtores capitalizados segurando o produto à espera de melhores cotações.",
+      "precos": "Em janeiro de 2008, o preço médio no Paraná era de R$ 42,50 por saca, com tendência de alta influenciada pela Bolsa de Chicago."
+    },
+    "estimativa_safra_07_08": {
+      "area_plantada": "2.316.516 hectares (estabilidade em relação à safra anterior).",
+      "producao_esperada": "11.916.480 toneladas (aumento de 1% apesar da área similar)."
+    }
+  },
+  "dinamica_na_agricultura_familiar_toledo": {
+    "perfil_produtivo": "A soja faz parte do modelo de 'agricultura convencional' ou de commodities que domina a paisagem agrícola de Toledo.",
+    "impactos": [
+      "Concentração de terras: O fortalecimento da monocultura de soja contribui para a retração da área de pequenos estabelecimentos familiares.",
+      "Uso de insumos: Observa-se um aumento no uso de agrotóxicos vinculados ao cultivo de soja.",
+      "Substituicao": "A soja e o milho exercem pressão sobre áreas anteriormente destinadas à diversidade de alimentos (hortifrutigranjeiros)."
+    ]
+  },
+  "riscos_climaticos": {
+    "geadas": "Embora a soja de verão escape das geadas de inverno, o documento sobre controle de geadas cita a cultura no contexto de perdas econômicas gerais que afetam o PIB agrícola.",
+    "chuvas": "As chuvas de final de ano em 2007 foram benéficas para o desenvolvimento das lavouras de soja, ao contrário do observado no feijão."
+  },
+  "fontes_consultadas": [
+    "SEAB/DERAL - Situação das Principais Culturas (Jan/2008)",
+    "Análise dos Censos Agropecuários (2006-2017) - Caso Toledo/PR",
+    "UTFPR - Sistema de Controle de Geadas (2017)"
+  ]
+}
