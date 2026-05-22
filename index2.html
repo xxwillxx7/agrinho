@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sistema de Sugestões Agrícolas</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Sistema de Sugestões Agrícolas</h1>
+
+    <p class="descricao">
+      Selecione uma cultura para receber informações, dicas e sugestões de manejo. 
+    </p>
+
+    <section class="opcoes">
+      <button type="button" onclick="carregarCultura('feijao')">
+        Feijão
+      </button>
+
+      <button type="button" onclick="carregarCultura('milho')">
+        Milho
+      </button>
+
+      <button type="button" onclick="carregarCultura('soja')">
+        Soja
+      </button>
+    </section>
+
+    <section id="resultado" class="resultado">
+      <p>Escolha uma cultura para visualizar as recomendações. </p>
+      <p>O conteúdo apresentado tem como base arquivos pesquisados sobre cada cultura agrícula e salvos em um arquivo json.</p>
+    </section>
+
+    <section class="area-ia">
+      <h2>Assistente Agrícola com IA</h2>
+
+      <p>
+        Use este espaço para consultar orientações sobre qualquer cultura agrícola.
+        Informe a cultura e faça uma pergunta relacionada à agricultura.
+      </p>
+
+      <p class="aviso-ia">
+        A IA responderá apenas perguntas relacionadas à agricultura.
+      </p>
+
+      <label for="chaveIa">Chave temporária de IA</label>
+      <input 
+        type="password" 
+        id="chaveIa" 
+        placeholder="Digite sua chave temporária de IA"
+        autocomplete="off"
+      >
+
+      <label class="opcao-chave">
+        <input 
+          type="checkbox" 
+          id="apagarChaveAposConsulta"
+          checked
+        >
+        Apagar chave após cada consulta
+      </label>
+
+      <label for="culturaIa">Cultura agrícola</label>
+      <input 
+        type="text" 
+        id="culturaIa" 
+        placeholder="Exemplo: tomate, café, milho, soja, mandioca"
+      >
+
+      <label for="perguntaIa">Sua pergunta</label>
+      <textarea 
+        id="perguntaIa" 
+        placeholder="Exemplo: Como melhorar o manejo do tomate em solo arenoso?"
+      ></textarea>
+
+      <button type="button" onclick="consultarIa()">
+        Consultar IA
+      </button>
+
+      <div id="respostaIa" class="resposta-ia"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
