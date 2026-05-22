@@ -1,1 +1,282 @@
 
+        /* Estilos limpos, amigáveis e totalmente responsivos */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f1;
+            color: #333;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 25px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        .descricao {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Seção de Botões de Culturas */
+        .opcoes {
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Botões grandes com animação física realista */
+        .opcoes button {
+            background-color: #ffffff;
+            border: none;
+            color: #2e7d32;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: transform 0.1s, background-color 0.2s;
+            box-shadow: 0 4px 0 #1b5e20;
+            border: 1px solid #c8e6c9;
+        }
+
+        .opcoes button:hover {
+            background-color: #e8f5e9;
+        }
+
+        .opcoes button:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #1b5e20;
+        }
+
+        /* Área onde os resultados das culturas aparecem */
+        .resultado {
+            background-color: #f9fbe7;
+            border-left: 6px solid #8bc34a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            min-height: 100px;
+        }
+
+        .resultado-placeholder {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Estilo das imagens dentro do resultado */
+        .cultura-imagem {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 3px solid #d4e157;
+        }
+
+        .cultura-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .resultado ul {
+            padding-left: 20px;
+            margin: 15px 0 0 0;
+        }
+
+        .resultado li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        /* Área do Assistente Inteligente IA */
+        .area-ia {
+            background-color: #efebe9;
+            border: 1px solid #d7ccc8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .area-ia h2 {
+            color: #4e342e;
+            border-bottom: 2px solid #d7ccc8;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .aviso-ia {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 10px 15px;
+            font-size: 0.95em;
+            color: #e65100;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* Campos de Entrada de dados (Formulário) */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            color: #4e342e;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bcaaa4;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #fafafa;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #8d6e63;
+            background-color: #ffffff;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .opcao-chave {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            margin: 10px 0 20px 0;
+            font-weight: normal;
+            font-size: 0.95em;
+            color: #5d4037;
+        }
+
+        .opcao-chave input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Botão Consultar IA */
+        .area-ia button {
+            background-color: #5d4037;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 0 #3e2723;
+            transition: transform 0.1s, background-color 0.2s;
+        }
+
+        .area-ia button:hover {
+            background-color: #4e342e;
+        }
+
+        .area-ia button:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #3e2723;
+        }
+
+        /* Bloco de Resposta da IA */
+        .resposta-ia {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #d7ccc8;
+            min-height: 50px;
+            display: none;
+            font-size: 1.05em;
+            white-space: pre-wrap; /* Mantém as quebras de linha que a IA enviar */
+        }
+
+        /* Alerta de erro personalizado (evita o uso de alert) */
+        .mensagem-erro {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Efeito de Carregando */
+        .carregando {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,0,0,0.1);
+            border-radius: 50%;
+            border-top-color: #5d4037;
+            animation: rodar 1s ease-in-out infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes rodar {
+            to { transform: rotate(360deg); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95em;
+            color: #666;
+            background-color: #eaeaea;
+            margin-top: 50px;
+        }
+
+        /* Adaptável para celulares e tablets */
+        @media (max-width: 600px) {
+            .opcoes {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .opcoes button {
+                width: 100%;
+                margin: 0;
+            }
+        }
