@@ -1,1 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Pequeno Agricultor - Sugestões e IA</title>
+    <style>
+        /* Estilos limpos, amigáveis e totalmente responsivos */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f1;
+            color: #333;
+        }
 
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 25px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        .descricao {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Seção de Botões de Culturas */
+        .opcoes {
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Botões grandes com animação física realista */
+        .opcoes button {
+            background-color: #ffffff;
+            border: none;
+            color: #2e7d32;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: transform 0.1s, background-color 0.2s;
+            box-shadow: 0 4px 0 #1b5e20;
+            border: 1px solid #c8e6c9;
+        }
+
+        .opcoes button:hover {
+            background-color: #e8f5e9;
+        }
+
+        .opcoes button:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #1b5e20;
+        }
+
+        /* Área onde os resultados das culturas aparecem */
+        .resultado {
+            background-color: #f9fbe7;
+            border-left: 6px solid #8bc34a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            min-height: 100px;
+        }
+
+        .resultado-placeholder {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Estilo das imagens dentro do resultado */
+        .cultura-imagem {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 3px solid #d4e157;
+        }
+
+        .cultura-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .resultado ul {
+            padding-left: 20px;
+            margin: 15px 0 0 0;
+        }
+
+        .resultado li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        /* Área do Assistente Inteligente IA */
+        .area-ia {
+            background-color: #efebe9;
+            border: 1px solid #d7ccc8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .area-ia h2 {
+            color: #4e342e;
+            border-bottom: 2px solid #d7ccc8;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .aviso-ia {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 10px 15px;
+            font-size: 0.95em;
+            color: #e65100;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* Campos de Entrada de dados (Formulário) */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            color: #4e342e;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bcaaa4;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #fafafa;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #8d6e63;
+            background-color: #ffffff;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .opcao-chave {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            margin: 10px 0 20px 0;
+            font-weight: normal;
+            font-size: 0.95em;
+            color: #5d4037;
+        }
+
+        .opcao-chave input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Botão Consultar IA */
+        .area-ia button {
+            background-color: #5d4037;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 0 #3e2723;
+            transition: transform 0.1s, background-color 0.2s;
+        }
+
+        .area-ia button:hover {
+            background-color: #4e342e;
+        }
+
+        .area-ia button:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #3e2723;
+        }
+
+        /* Bloco de Resposta da IA */
+        .resposta-ia {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #d7ccc8;
+            min-height: 50px;
+            display: none;
+            font-size: 1.05em;
+            white-space: pre-wrap; /* Mantém as quebras de linha que a IA enviar */
+        }
+
+        /* Alerta de erro personalizado (evita o uso de alert) */
+        .mensagem-erro {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Efeito de Carregando */
+        .carregando {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,0,0,0.1);
+            border-radius: 50%;
+            border-top-color: #5d4037;
+            animation: rodar 1s ease-in-out infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes rodar {
+            to { transform: rotate(360deg); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95em;
+            color: #666;
+            background-color: #eaeaea;
+            margin-top: 50px;
+        }
+
+        /* Adaptável para celulares e tablets */
+        @media (max-width: 600px) {
+            .opcoes {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .opcoes button {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portal do Pequeno Agricultor</h1>
+    <p>Tecnologia simples e inteligente a serviço de quem planta</p>
+</header>
+
+<main class="container">
+    <h2>Sistema de Sugestões Agrícolas</h2>
+    <p class="descricao">
+        Selecione uma cultura abaixo para receber informações essenciais, dicas e sugestões de manejo direto do nosso banco de dados.
+    </p>
+
+    <!-- Seção de botões para carregar culturas -->
+    <section class="opcoes">
+        <button type="button" onclick="carregarCultura('feijao')">Feijão</button>
+        <button type="button" onclick="carregarCultura('milho')">Milho</button>
+        <button type="button" onclick="carregarCultura('soja')">Soja</button>
+    </section>
+
+    <!-- Painel que exibe a cultura selecionada -->
+    <section id="resultado" class="resultado">
+        <div class="resultado-placeholder">
+            <p>Escolha uma cultura acima para visualizar as recomendações.</p>
+            <p style="font-size: 0.9em; margin-top: 10px; color: #888;">
+                O conteúdo apresentado tem como base arquivos pesquisados sobre cada cultura agrícola e salvos em nosso sistema local.
+            </p>
+        </div>
+    </section>
+
+    <!-- Formulário do Assistente Inteligente com IA -->
+    <section class="area-ia">
+        <h2>Assistente Agrícola com IA</h2>
+        <p>
+            Use este espaço para consultar orientações inteligentes sobre <strong>qualquer</strong> cultura agrícola (como tomate, café, mandioca, etc).
+        </p>
+
+        <p class="aviso-ia">
+            <strong>Aviso de segurança:</strong> A Inteligência Artificial responderá apenas perguntas estritamente relacionadas ao tema de agricultura.
+        </p>
+
+        <label for="chaveIa">Chave temporária de IA (API Key do Gemini)</label>
+        <input 
+            type="password" 
+            id="chaveIa" 
+            placeholder="Cole aqui a sua chave de acesso (API Key)"
+            autocomplete="off"
+        >
+
+        <label class="opcao-chave">
+            <input 
+                type="checkbox" 
+                id="apagarChaveAposConsulta"
+                checked
+            >
+            Apagar chave do campo após a resposta ser exibida
+        </label>
+
+        <label for="culturaIa">Qual cultura deseja consultar?</label>
+        <input 
+            type="text" 
+            id="culturaIa" 
+            placeholder="Exemplo: tomate, café, mandioca, laranja..."
+        >
+
+        <label for="perguntaIa">Sua pergunta para a IA</label>
+        <textarea 
+            id="perguntaIa" 
+            placeholder="Exemplo: Como fazer adubação caseira para essa cultura ou combater pragas comuns?"
+        ></textarea>
+
+        <button type="button" id="btnConsultarIa" onclick="consultarIa()">
+            Consultar Inteligência Artificial
+        </button>
+
+        <div id="respostaIa" class="resposta-ia"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Portal do Pequeno Agricultor - Apoio constante ao homem do campo.</p>
+</footer>
+
+<script>
+    // Banco de dados interno simulando o arquivo JSON que armazena as informações básicas
+    const bancoCulturas = {
+        feijao: {
+            nome: "Cultura do Feijão",
+            imagem: "https://images.unsplash.com/photo-1599599810694-b5b37304c041?q=80&w=1000&auto=format&fit=crop",
+            dicas: [
+                "<strong>Época de Plantio:</strong> O feijão prefere climas amenos. Evite plantar em épocas de muito frio ou geadas bruscas.",
+                "<strong>Preparação do Chão:</strong> O solo deve estar fofo e com ótima drenagem. Ele não pode acumular água parada para não apodrecer as raízes.",
+                "<strong>Espaçamento:</strong> Procure deixar um palmo e meio (40 a 50cm) entre as linhas de plantio.",
+                "<strong>Momento da Colheita:</strong> Quando as vagens estiverem bem secas e mudarem de cor (amareladas/marrons), é hora de colher."
+            ]
+        },
+        milho: {
+            nome: "Cultura do Milho",
+            imagem: "https://images.unsplash.com/photo-1551730459-92db2a308d6a?q=80&w=1000&auto=format&fit=crop",
+            dicas: [
+                "<strong>Luz do Sol:</strong> O milho adora sol direto! Escolha sempre o local mais ensolarado e aberto da sua propriedade.",
+                "<strong>Adubação Natural:</strong> O uso de esterco de galinha ou gado bem curtido logo no plantio garante espigas cheias e bonitas.",
+                "<strong>Profundidade:</strong> Não enterre demais a semente na cova; uma profundidade entre 3 e 5 centímetros é o ideal.",
+                "<strong>Irrigação:</strong> Mantenha a terra sempre úmida, prestando atenção redobrada no momento em que a planta soltar o pendão."
+            ]
+        },
+        soja: {
+            nome: "Cultura da Soja",
+            imagem: "https://images.unsplash.com/photo-1594756114251-396556e8738b?q=80&w=1000&auto=format&fit=crop",
+            dicas: [
+                "<strong>Clima Ideal:</strong> A soja se desenvolve melhor em regiões quentes e com chuvas constantes durante o crescimento.",
+                "<strong>Cuidado com o Mato:</strong> Mantenha a lavoura sempre limpa, principalmente nos primeiros 45 dias, para o mato não roubar os nutrientes.",
+                "<strong>Sementes:</strong> Dê preferência a sementes tratadas com inoculantes adequados, garantindo plantas fortes desde o início.",
+                "<strong>Pragas:</strong> Faça vistorias semanais nas folhas para monitorar o aparecimento de lagartas ou percevejos."
+            ]
+        }
+    };
+
+    // Função para carregar dinamicamente as informações do banco de dados local
+    function carregarCultura(culturaKey) {
+        const resultadoDiv = document.getElementById('resultado');
+        const dados = bancoCulturas[culturaKey];
+
+        if (dados) {
+            let htmlConteudo = `
+                <h3>${dados.nome}</h3>
+                <div class="cultura-imagem">
+                    <img src="${dados.imagem}" alt="${dados.nome}">
+                </div>
+                <p><strong>Recomendações técnicas e orientações práticas de manejo:</strong></p>
+                <ul>
+            `;
+
+            dados.dicas.forEach(dica => {
+                htmlConteudo += `<li>${dica}</li>`;
+            });
+
+            htmlConteudo += `
+                </ul>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #555;">
+                    *Nota: Estas orientações são adaptadas para pequenas propriedades familiares.
+                </p>
+            `;
+
+            resultadoDiv.innerHTML = htmlConteudo;
+        } else {
+            resultadoDiv.innerHTML = `<div class="mensagem-erro">Erro ao carregar dados da cultura selecionada.</div>`;
+        }
+    }
+
+    // Função auxiliar para atrasar a execução (usada no backoff exponencial de rede)
+    function aguardar(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // Função para chamar a API da IA com lógica de repetição em caso de falha de conexão (Exponential Backoff)
+    async function requisitarGeminiComRetentativas(url, payload, retentativas = 5, atraso = 1000) {
+        for (let i = 0; i < retentativas; i++) {
+            try {
+                const resposta = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (resposta.ok) {
+                    return await resposta.json();
+                }
+
+                // Se houver erro de servidor, tentamos novamente
+                if (resposta.status >= 500 || resposta.status === 429) {
+                    throw new Error(`Servidor instável (Código: ${resposta.status})`);
+                } else {
+                    const erroInfo = await resposta.json();
+                    throw new Error(erroInfo.error?.message || `Erro na chamada (Status ${resposta.status})`);
+                }
+            } catch (erro) {
+                if (i === retentativas - 1) {
+                    throw erro; // Se esgotou as chances, propaga o erro
+                }
+                await aguardar(atraso);
+                atraso *= 2; // Dobra o tempo de espera para a próxima tentativa
+            }
+        }
+    }
+
+    // Função de tratamento do formulário da IA
+    async function consultarIa() {
+        const chaveIaInput = document.getElementById('chaveIa');
+        const apagarChaveCheck = document.getElementById('apagarChaveAposConsulta');
+        const culturaIaInput = document.getElementById('culturaIa');
+        const perguntaIaInput = document.getElementById('perguntaIa');
+        const respostaIaDiv = document.getElementById('respostaIa');
+        const btnConsultar = document.getElementById('btnConsultarIa');
+
+        const chave = chaveIaInput.value.trim();
+        const cultura = culturaIaInput.value.trim();
+        const pergunta = perguntaIaInput.value.trim();
+
+        // Limpa respostas anteriores
+        respostaIaDiv.style.display = 'none';
+        respostaIaDiv.innerHTML = '';
+
+        // Validação de segurança básica local (para evitar consumo indevido)
+        if (!chave) {
+            exibirErroIa("Por favor, informe uma chave temporária de IA (API Key) para realizar a consulta.");
+            return;
+        }
+
+        if (!cultura) {
+            exibirErroIa("Digite qual é a cultura agrícola que você deseja analisar.");
+            return;
+        }
+
+        if (!pergunta) {
+            exibirErroIa("Escreva a sua pergunta antes de clicar em consultar.");
+            return;
+        }
+
+        // Altera o estado do botão para indicar processamento
+        btnConsultar.disabled = true;
+        btnConsultar.innerHTML = `<span class="carregando"></span>Buscando respostas no campo...`;
+
+        // Instruções do sistema para a Inteligência Artificial garantir que ela aja apenas como agrônoma focada
+        const promptSistema = `Você é o "Agrônomo Virtual", um assistente especialista focado em agricultura, manejo de terras e cultivo.
+Sua missão é dar dicas simples, práticas, diretas e cientificamente corretas para pequenos produtores rurais.
+Use linguagem acessível e acolhedora do interior do Brasil.
+ATENÇÃO: Responda APENAS perguntas relacionadas à agricultura, solos, controle de pragas, cultivo e plantas. 
+Se o usuário perguntar sobre qualquer tema fora de agricultura (como matemática, receitas de bolo, programação ou notícias gerais), recuse educadamente explicando que você foi treinado para ajudar apenas nas tarefas do campo.`;
+
+        // Construção do prompt do usuário estruturado
+        const promptUsuario = `Cultura analisada: ${cultura}\nPergunta do agricultor: ${pergunta}`;
+
+        // URL da API usando o modelo correto da especificação técnica
+        const urlApi = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${chave}`;
+
+        const payload = {
+            contents: [{
+                parts: [{ text: promptUsuario }]
+            }],
+            systemInstruction: {
+                parts: [{ text: promptSistema }]
+            }
+        };
+
+        try {
+            const dadosResposta = await requisitarGeminiComRetentativas(urlApi, payload);
+            
+            // Extrai a resposta gerada de dentro da árvore de retorno do Gemini
+            const textoResposta = dadosResposta.candidates?.[0]?.content?.parts?.[0]?.text;
+
+            if (textoResposta) {
+                respostaIaDiv.style.display = 'block';
+                respostaIaDiv.innerHTML = `<strong>Dicas do Assistente Agrícola:</strong>\n\n${formatarTextoIa(textoResposta)}`;
+                
+                // Apaga a chave se o usuário marcou o check de privacidade
+                if (apagarChaveCheck.checked) {
+                    chaveIaInput.value = '';
+                }
+            } else {
+                throw new Error("A resposta veio em um formato desconhecido.");
+            }
+
+        } catch (erro) {
+            exibirErroIa(`Erro ao consultar o assistente de IA: ${erro.message}. Verifique sua chave de acesso ou tente novamente em instantes.`);
+        } finally {
+            // Restaura o botão ao estado normal
+            btnConsultar.disabled = false;
+            btnConsultar.innerHTML = "Consultar Inteligência Artificial";
+        }
+    }
+
+    // Auxiliar para formatar textos simples (quebras de linha, negritos básicos vindos em Markdown)
+    function formatarTextoIa(texto) {
+        // Substitui asteriscos duplos (que representam negrito no markdown) por tags HTML strong
+        let textoFormatado = texto.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        // Limpa asteriscos simples usados para marcadores de lista
+        textoFormatado = textoFormatado.replace(/^\s*\*\s*(.*)/gm, '• $1');
+        return textoFormatado;
+    }
+
+    // Função de exibição de erros amigável integrada no painel da IA
+    function exibirErroIa(mensagem) {
+        const respostaIaDiv = document.getElementById('respostaIa');
+        respostaIaDiv.style.display = 'block';
+        respostaIaDiv.innerHTML = `<div class="mensagem-erro">${mensagem}</div>`;
+    }
+</script>
+
+</body>
+</html>
