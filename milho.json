@@ -3,7 +3,7 @@
   "contexto_geral": "O milho é tratado nos documentos como uma cultura central da economia paranaense, sendo essencial tanto para a exportação quanto para o suporte às cadeias de proteína animal (suínos, aves e peixes).",
   "analise_safra_e_clima_2008": {
     "condicoes_climaticas": {
-      "desenvolvimento": "As lavouras plantadas precocemente (agosto/setembro) tiveram desenvolvimento razoável, enquanto as semeadas após outubro de 2007 apresentaram 'bom estande e desenvolvimento' devido às chuvas regulares.",
+      "desenvolvimento": "As lavouras plantadas precocemente (agosto/setembro) tiveram desenvolvimento razoável, enquanto as semeaduras feitas após outubro de 2007 apresentaram 'bom estande e desenvolvimento' devido às chuvas regulares.",
       "riscos": "Citado como cultura vulnerável a geadas, o que impulsiona o desenvolvimento de tecnologias de proteção térmica (termonebulização)."
     },
     "estimativa_producao_parana": {
@@ -31,6 +31,8 @@
     "DERAL/SEAB - Acompanhamento de Situação das Culturas (Janeiro/2008)",
     "Análise Comparativa dos Censos Agropecuários - UNILA (2025)",
     "Estudo sobre Controle de Geadas - UTFPR (2017)",
-    "https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/Panorama%20da%20AF%20e%20AE%20DESAFIOS%20E%20DEMANDAS%20CONSEA%205%20final.pdf"
+    "https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/Panorama%20da%20AF%20e%20AE%20DESAFIOS%20E%20DEMANDAS%20CONSEA%205%20final.pdf",
+    "https://repositorio.utfpr.edu.br/jspui/bitstream/1/9512/2/CT_COMET_2017_1_02.pdf",
+    "https://www.researchgate.net/publication/401085846_PERFIL_DO_COOPERATIVISMO_NA_AGRICULTURA_FAMILIAR_NO_ESTADO_DO_PARANA_UMA_ANALISE_A_PARTIR_DOS_DADOS_DO_CENSO_AGROPECUARIO_DE_2017"
   ]
 }
