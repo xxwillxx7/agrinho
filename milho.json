@@ -1,0 +1,36 @@
+{
+  "cultura": "Milho",
+  "contexto_geral": "O milho é tratado nos documentos como uma cultura central da economia paranaense, sendo essencial tanto para a exportação quanto para o suporte às cadeias de proteína animal (suínos, aves e peixes).",
+  "analise_safra_e_clima_2008": {
+    "condicoes_climaticas": {
+      "desenvolvimento": "As lavouras plantadas precocemente (agosto/setembro) tiveram desenvolvimento razoável, enquanto as semeadas após outubro de 2007 apresentaram 'bom estande e desenvolvimento' devido às chuvas regulares.",
+      "riscos": "Citado como cultura vulnerável a geadas, o que impulsiona o desenvolvimento de tecnologias de proteção térmica (termonebulização)."
+    },
+    "estimativa_producao_parana": {
+      "area_plantada": "1.233.149 hectares (queda de 5% em relação à safra anterior).",
+      "producao_esperada": "6.141.011 toneladas (redução de 3% devido à menor área).",
+      "produtividade_media": "4.980 kg/ha."
+    },
+    "comercializacao": {
+      "precos": "Em janeiro de 2008, o preço médio era de R$ 20,40 por saca, com tendência de alta influenciada pelo mercado internacional.",
+      "perfil_venda": "Produtores capitalizados segurando estoques para valorização futura."
+    }
+  },
+  "dinamica_em_toledo_pr": {
+    "papel_economico": "O milho é a base energética para a forte indústria de proteína animal de Toledo (suinocultura e avicultura).",
+    "transformacoes_2006_2017": [
+      "Fortalecimento da monocultura de milho e soja como commodities.",
+      "Pressão sobre a agricultura familiar: O avanço do cultivo de milho convencional contribui para a redução de áreas destinadas a hortaliças e diversidade alimentar.",
+      "Uso de tecnologia: Aumento do uso de agrotóxicos e mecanização pesada nas áreas de milho."
+    ]
+  },
+  "segunda_safra_safrinha": {
+    "historico_2007": "Mencionada a conclusão da colheita da 2ª safra de 2006/07, com 89,1% da produção já vendida até o início de 2008."
+  },
+  "fontes_de_referencia": [
+    "DERAL/SEAB - Acompanhamento de Situação das Culturas (Janeiro/2008)",
+    "Análise Comparativa dos Censos Agropecuários - UNILA (2025)",
+    "Estudo sobre Controle de Geadas - UTFPR (2017)",
+    "https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/Panorama%20da%20AF%20e%20AE%20DESAFIOS%20E%20DEMANDAS%20CONSEA%205%20final.pdf"
+  ]
+}
